@@ -1,3 +1,17 @@
+i3status-rs (0.36.1-1) resolute; urgency=medium
+
+  * New upstream release 0.36.1 (from 0.32.1). Upstream breaking changes
+    since 0.32.1 (kdeconnect options, removed apt/dnf/pacman blocks,
+    weather sunrise/sunset in polar regions) do not affect Regolith's
+    default config.toml.
+  * Bump openssl 0.10.81 and openssl-sys 0.9.117 in Cargo.lock so the
+    package builds against OpenSSL 4 (Ubuntu 26.10).
+  * Build-Depend on cargo and rustc >= 1.85 (Rust 2024 edition).
+  * Drop the hard-coded libssl3 dependency; shlibs picks the OpenSSL
+    runtime the binary links.
+
+ -- rego-port-bot <339843353+rego-port-bot@users.noreply.github.com>  Tue, 13 Oct 2026 14:29:08 +0000
+
 i3status-rs (0.32.1-2) mantic; urgency=medium
 
   [ Khosrow Moossavi ]
